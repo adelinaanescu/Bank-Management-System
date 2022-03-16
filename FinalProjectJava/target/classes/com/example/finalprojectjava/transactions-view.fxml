@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="366.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalprojectjava.TransactionsController">
+   <children>
+      <ImageView fitHeight="58.0" fitWidth="48.0" layoutX="290.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../bank_logo.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="128.0" layoutY="33.0" prefHeight="18.0" prefWidth="109.0" text="Transactions" />
+      <Button fx:id="backButton" layoutX="24.0" layoutY="29.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="26.0" prefWidth="58.0" text="Back" />
+      <TableView fx:id="transactionTableView" layoutX="24.0" layoutY="123.0" prefHeight="260.0" prefWidth="324.0">
+        <columns>
+          <TableColumn fx:id="typeTableColumn" prefWidth="71.99993705749512" text="Type" />
+          <TableColumn fx:id="descriptionTableColumn" prefWidth="127.20008087158203" text="Description" />
+            <TableColumn fx:id="amountTableColumn" prefWidth="63.199951171875" text="Amount" />
+            <TableColumn fx:id="currencyTableColumn" prefWidth="62.40008544921875" text="Currency" />
+        </columns>
+      </TableView>
+      <Label layoutX="24.0" layoutY="86.0" prefHeight="26.0" prefWidth="48.0" text="Search" textAlignment="CENTER" />
+      <TextField fx:id="searchTextField" layoutX="71.0" layoutY="87.0" prefHeight="26.0" prefWidth="270.0" promptText="Keywords" />
+   </children>
+</AnchorPane>
